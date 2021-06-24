@@ -24,6 +24,12 @@ body {
   color: white;
   position: fixed;
   bottom: 0;
+  z-index: 1000;
+  opacity: 0.7;
+}
+
+.preheader:hover {
+  opacity: 1;
 }
 
 .preheader ul li {
@@ -52,7 +58,9 @@ body {
   /* margin-top: 10px; */
   flex-wrap: nowrap;
   border-bottom: 2px solid #6ec1e4;
-  z-index: 100;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+
+  z-index: 1000000;
   background-color: white;
   position: fixed;
   top: 0;
@@ -94,6 +102,7 @@ body {
   display: flex;
   flex-direction: row;
   position: relative;
+  z-index: 1001;
 }
 
 .main_section img {
@@ -224,6 +233,7 @@ body {
 
 .linija hr {
   background-color: #6ec1e4;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   border: none;
   height: 2px;
   position: relative;
@@ -408,4 +418,137 @@ body {
 }
 #radio4:checked ~ .navigation-auto .auto-btn4 {
   background: #5794b7;
+}
+
+/* TRECA SEKCIJA */
+
+.nasiproizvodi_section {
+  display: flex;
+  justify-content: space-between;
+  height: 100vh;
+  padding-top: 50px;
+  /* background: rgb(255, 255, 255);
+  background: linear-gradient(
+    153deg,
+    rgba(255, 255, 255, 1) 59%,
+    rgba(87, 148, 183, 1) 100%
+  ); */
+
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    153deg,
+    rgba(255, 255, 255, 1) 59%,
+    rgba(110, 193, 228, 1) 85%,
+    rgba(87, 148, 183, 1) 100%
+  );
+}
+
+.nasiproizvodi_first {
+  font-family: "Shadows Into Light Two", cursive;
+  font-size: 30px;
+  color: #5794b7;
+  text-align: center;
+}
+
+.nasiproizvodi_first h2 {
+  position: relative;
+  top: 20%;
+  right: 45%;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 550px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 2px solid #5794b7;
+  border-radius: 10px;
+  height: 400px;
+  position: relative;
+  right: 9%;
+  z-index: 1;
+}
+
+.tabs input[type="radio"] {
+  display: none;
+}
+
+.tabs label {
+  padding: 25px;
+  color: #555555;
+  background: #6ec1e4;
+  font-weight: bold;
+  border-top: 2px solid #6ec1e4;
+  border-bottom: 2px solid #6ec1e4;
+
+  height: 20px;
+  /* border-top-left-radius: 1em; */
+  border-end-end-radius: 1em;
+  /* border-radius: 1em; */
+  overflow: hidden;
+}
+
+.tabs .tab {
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  /* STAVLJAMO ORDER 1 da stavimo na vrhu sve tabove */
+  order: 1;
+  display: none;
+}
+
+/* ORDERI FLEXBOX */
+
+.tabs .tab h2 {
+  font-size: 3em;
+}
+
+.tabs input[type="radio"]:checked + label + .tab {
+  display: block;
+}
+
+.tabs input[type="radio"]:checked + label {
+  background: #5794b7;
+}
+
+.tabs .tab ol {
+  color: #5794b7;
+  text-align: center;
+  list-style: disc;
+}
+
+.nasiproizvodi_first hr {
+  background-color: #5794b7;
+  border: none;
+  height: 2px;
+  margin-right: 50px;
+  position: relative;
+  top: 15%;
+  right: 40%;
+}
+
+@keyframes changewidth {
+  from {
+    width: 10px;
+  }
+
+  to {
+    width: 200px;
+  }
+}
+
+.nasiproizvodi_first hr {
+  animation-duration: 0.6s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.nasiproizvodi_first .drugahrhr {
+  background-color: #5794b7;
+  border: none;
+  height: 2px;
+  margin-right: 150px;
+  margin-left: 50px;
 }
