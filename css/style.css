@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -7,14 +12,50 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.header {
+.preheader {
   max-width: 100%;
+  background-color: #6ec1e4;
+  height: 6.5vh;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-radius: 8px 8px 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+.preheader ul li {
+  list-style: none;
+}
+
+.preheader .firstpreheader {
+  margin-left: 10px;
+}
+.preheader .firstpreheader a {
+  padding-left: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.preheader .secondpreheader {
+  margin-right: 30px;
+  color: white;
+}
+
+.header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding-right: 100px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   flex-wrap: nowrap;
   border-bottom: 2px solid #6ec1e4;
+  z-index: 100;
+  background-color: white;
+  position: fixed;
+  top: 0;
 }
 
 .header .logo {
@@ -33,6 +74,8 @@ body {
 }
 
 .header .nav ul li {
+  position: relative;
+  right: 70px;
   margin-left: 40px;
   list-style: none;
 }
@@ -40,4 +83,329 @@ body {
 .header .nav ul li a {
   text-decoration: none;
   color: #555555;
+}
+
+.header .nav ul li a:hover {
+  color: #6ec1e4;
+  transition: 0.3s;
+}
+
+.main_section {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.main_section img {
+  height: 100vh;
+  display: flex;
+}
+
+.main_section h1 {
+  position: absolute;
+  top: 20%;
+  left: 6%;
+  font-family: "Shadows Into Light Two", cursive;
+  font-size: 70px;
+  color: #5794b7;
+  text-align: center;
+  color: white;
+}
+
+.main_section p {
+  position: absolute;
+  top: 70%;
+  /* right: 50%; */
+
+  margin: auto;
+  width: 50%;
+
+  text-align: center;
+
+  font-family: "Shadows Into Light Two", cursive;
+  font-size: 30px;
+  color: #5794b7;
+  text-align: center;
+}
+
+.main_section_slika img {
+  height: 250px;
+  width: 250px;
+  display: flex;
+  position: absolute;
+  top: 25%;
+  right: 35%;
+}
+.main_section_slika .img2 {
+  position: absolute;
+  right: 25%;
+}
+.main_section_slika .img3 {
+  position: absolute;
+  right: 5%;
+}
+.main_section .razlicitaslova {
+  color: white;
+}
+
+.thumb img {
+  height: 80px;
+  width: 80px;
+  cursor: pointer;
+}
+.thumb li {
+  list-style: none;
+}
+
+.thumb .thumb1 {
+  position: absolute;
+  top: 25%;
+  right: 20%;
+}
+
+.thumb .thumb2 {
+  position: absolute;
+  top: 40%;
+  right: 20%;
+}
+.thumb .thumb3 {
+  position: absolute;
+  top: 55%;
+  right: 20%;
+}
+
+.thumb li::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #6ec1e4;
+  display: block;
+  position: relative;
+  top: 35px;
+  right: 100px;
+  /* clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%); */
+  clip-path: polygon(
+    30% 0%,
+    70% 0%,
+    100% 30%,
+    100% 70%,
+    70% 100%,
+    30% 100%,
+    0% 70%,
+    0% 30%
+  );
+}
+
+.thumb li:hover {
+  transform: translate(-15px);
+}
+
+.socialnetwork ul {
+  /* position: absolute;
+  top: 30%;
+  right: 40px; */
+  list-style: none;
+  font-size: 40px;
+  position: fixed;
+  top: 30%;
+  right: 40px;
+}
+
+.socialnetwork ul li a {
+  color: #6ec1e4;
+}
+
+.socialnetwork li:hover i {
+  background-color: #6ec1e4;
+  color: white;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.linija hr {
+  background-color: #6ec1e4;
+  border: none;
+  height: 2px;
+  position: relative;
+  top: -10px;
+}
+
+.onama_section {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  justify-content: space-between;
+  /* margin-top: 50px; */
+  padding-top: 100px;
+}
+
+.onama_section .onama_firstdiv {
+  width: 500px;
+  height: 500px;
+  margin-left: 100px;
+  color: #6ec1e4;
+  margin-top: 15px;
+}
+
+.onama_section .onama_firstdiv h1 {
+  font-family: "Shadows Into Light Two", cursive;
+  color: #5794b7;
+  font-size: 56px;
+}
+
+.onama_section .onama_firstdiv hr {
+  background-color: #5794b7;
+  border: none;
+  height: 2px;
+  margin-right: 250px;
+}
+
+/* DA SE POMERA HR TAG INFITIVE LOOP */
+
+@keyframes changewidth {
+  from {
+    width: 100px;
+  }
+
+  to {
+    width: 300px;
+  }
+}
+
+.onama_section .onama_firstdiv hr {
+  animation-duration: 0.6s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+/* ============ */
+
+.onama_section .onama_firstdiv .drugahr {
+  background-color: #5794b7;
+  border: none;
+  height: 2px;
+  margin-right: 350px;
+  margin-left: 50px;
+}
+
+.onama_section .onama_firstdiv h4 {
+  color: #6ec1e4;
+  text-shadow: 1px 1px grey;
+  font-size: 24px;
+}
+
+.onama_section .onama_firstdiv p {
+  font-size: 20px;
+}
+
+.onama_section .onama_seconddiv {
+  width: 500px;
+  height: 500px;
+  margin-right: 100px;
+}
+
+/* ========== */
+.slider {
+  position: relative;
+  right: 170px;
+  top: 40px;
+  width: 650px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/* css za manualnu slide navigaciju */
+
+.navigation-manual {
+  position: absolute;
+  width: 650px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn {
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #5794b7;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* css za automatsku navigaciju */
+
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 650px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div {
+  border: 2px solid;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #5794b7;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #5794b7;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #5794b7;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #5794b7;
 }
