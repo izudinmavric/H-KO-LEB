@@ -121,6 +121,18 @@ body {
   color: white;
 }
 
+.main_section .grow {
+  animation: grow 2s ease;
+}
+@keyframes grow {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .main_section p {
   position: absolute;
   top: 70%;
@@ -261,6 +273,34 @@ body {
   font-family: "Shadows Into Light Two", cursive;
   color: #5794b7;
   font-size: 56px;
+}
+
+.onama_section .onama_firstdiv .bounce {
+  animation: bounce 2s ease infinite;
+}
+
+@keyframes bounce {
+  70% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .onama_section .onama_firstdiv hr {
@@ -487,6 +527,7 @@ body {
   border-end-end-radius: 1em;
   /* border-radius: 1em; */
   overflow: hidden;
+  cursor: pointer;
 }
 
 .tabs .tab {
@@ -499,10 +540,6 @@ body {
 }
 
 /* ORDERI FLEXBOX */
-
-.tabs .tab h2 {
-  font-size: 3em;
-}
 
 .tabs input[type="radio"]:checked + label + .tab {
   display: block;
@@ -551,4 +588,171 @@ body {
   height: 2px;
   margin-right: 150px;
   margin-left: 50px;
+}
+
+.nasiproizvodi_section .elastic-spin {
+  animation: elastic-spin 3s ease;
+}
+@keyframes elastic-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+.nasepekare_section {
+  height: 200vh;
+  padding-top: 100px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    306deg,
+    rgba(255, 255, 255, 1) 59%,
+    rgba(110, 193, 228, 1) 85%,
+    rgba(87, 148, 183, 1) 100%
+  );
+}
+
+.nasepekare_section h1 {
+  text-align: center;
+  font-family: "Shadows Into Light Two", cursive;
+  color: #5794b7;
+  font-size: 55px;
+}
+
+.nasepekare_section p {
+  text-align: center;
+  color: #5794b7;
+  text-shadow: 1px 1px grey;
+  font-size: 24px;
+}
+
+.nasepekare_section .prvired {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.nasepekare_section .prvired .pekara img {
+  width: 360px;
+  height: 300px;
+  border-radius: 10px;
+}
+
+.nasepekare_section .prvired .pekara {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 30px;
+  box-shadow: 0 0 60px #5794b7;
+  border: none;
+}
+
+.nasepekare_section .prvired .pekara h1 {
+  text-align: center;
+  font-family: "Shadows Into Light Two", cursive;
+  color: #5794b7;
+  font-size: 36px;
+}
+
+.nasepekare_section .prvired .pekara blockquote {
+  text-align: center;
+  color: #5794b7;
+}
+
+.nasepekare_section hr {
+  background-color: #5794b7;
+  border: none;
+  height: 2px;
+}
+
+@keyframes changewidth {
+  from {
+    width: 100px;
+  }
+
+  to {
+    width: 200px;
+  }
+}
+
+.nasepekare_section hr {
+  animation-duration: 0.6s;
+  animation-name: changewidth;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.pekara {
+  animation: fade-in 2s linear;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nasepekare_section h1,
+p,
+hr {
+  animation: bounce-in 2s ease;
+}
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* SCROLL TOP */
+
+.scrolltop {
+  position: fixed;
+  right: 40px;
+  /* bottom: 1rem; */
+  bottom: -20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #6ec1e4;
+  border-radius: 5px;
+  z-index: 100000;
+  transition: 0.4s;
+  visibility: hidden;
+  opacity: 0.6;
+}
+
+.scrolltop:hover {
+  background-color: #5794b7;
+  opacity: 1;
+}
+
+.scrolltop i {
+  font-size: 28px;
+  color: white;
+}
+.scrolltop {
+  text-decoration: none;
+}
+
+/* SHOW SCROLL TOP */
+
+.scroll-top {
+  visibility: visible;
+  bottom: 24px;
 }
