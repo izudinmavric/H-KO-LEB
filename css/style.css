@@ -236,21 +236,14 @@ body {
   color: #6ec1e4;
 }
 
-.socialnetwork li:hover i {
-  background-color: #6ec1e4;
-  color: white;
-  border-radius: 8px;
-  padding: 3px;
-}
-
-.linija hr {
+/* .linija hr {
   background-color: #6ec1e4;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
   border: none;
   height: 2px;
   position: relative;
   top: -10px;
-}
+} */
 
 .onama_section {
   display: flex;
@@ -633,6 +626,8 @@ body {
   justify-content: space-around;
   margin-top: 50px;
   flex-wrap: wrap;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .nasepekare_section .prvired .pekara img {
@@ -720,6 +715,11 @@ hr {
 
 /* SCROLL TOP */
 
+/* ============= */
+/* ============= */
+/* ============= */
+/* ============= */
+
 .scrolltop {
   position: fixed;
   right: 40px;
@@ -755,4 +755,111 @@ hr {
 .scroll-top {
   visibility: visible;
   bottom: 24px;
+}
+
+/* ============= */
+/* ============= */
+/* ============= */
+/* ============= */
+
+.galerija_section {
+  /* height: 100vh; */
+  padding-top: 100px;
+}
+
+.galerija_section h1 {
+  text-align: center;
+  font-family: "Shadows Into Light Two", cursive;
+  color: #5794b7;
+  font-size: 55px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin-right: 15px;
+  margin-top: 80px;
+}
+
+.gallery-item {
+  margin: 20px;
+  box-shadow: 0 0 40px #6ec1e4;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-image {
+  display: block;
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 400ms ease-out;
+}
+.gallery-image:hover {
+  transform: scale(1.15);
+}
+
+.kontakt_section {
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.kontakt_section h1 {
+  text-align: center;
+  font-family: "Shadows Into Light Two", cursive;
+  color: #5794b7;
+  font-size: 50px;
+}
+
+.kontakt {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.mapa {
+  border-radius: 15px;
+  overflow: hidden;
+  width: 40%;
+  box-shadow: 0 0 40px #6ec1e4;
+}
+
+.kontakt_forma {
+  width: 35%;
+}
+
+.label {
+  margin-left: 10px;
+  color: #6ec1e4;
+}
+
+.input::placeholder {
+  color: #555555;
+}
+
+.input {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #6ec1e4;
+  opacity: 0.4;
+  border-radius: 15px;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 25px #6ec1e4;
+}
+
+.btn {
+  background-color: #6ec1e4;
+  border-radius: 15px;
+  width: 103%;
+  text-align: center;
+  /* position: absolute;
+  right: 20%; */
+  margin-top: 10px;
+  padding: 5px;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 40px #6ec1e4;
 }
