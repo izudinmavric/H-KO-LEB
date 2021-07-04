@@ -863,3 +863,80 @@ hr {
   color: white;
   box-shadow: 0 0 40px #6ec1e4;
 }
+
+.footer {
+  height: 300px;
+
+  margin-top: 150px;
+
+  border-top: 2px solid #6ec1e4;
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.2);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 4%,
+    rgba(110, 193, 228, 1) 87%,
+    rgba(87, 148, 183, 1) 100%
+  );
+}
+
+.footer2 {
+  display: flex;
+  justify-content: space-between;
+  color: #5794b7;
+  margin-left: 80px;
+  margin-right: 80px;
+}
+.footer .footer2 .logo {
+  display: flex;
+}
+.footer .footer2 .logo img {
+  width: 220px;
+  height: 180px;
+}
+
+.footer2 .logo .radnovreme12 {
+  margin-top: 60px;
+}
+.footer2 .logo p {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.footer2 ul {
+  list-style: none;
+}
+.footer2 li {
+  display: inline;
+  margin-left: 20px;
+}
+.footer2 a {
+  text-decoration: none;
+  color: #5794b7;
+}
+
+.footer2 a:hover {
+  color: #6ec1e4;
+}
+
+.footer2 .navigacija {
+  color: #5794b7;
+  margin-top: 50px;
+  margin-right: 60px;
+}
+
+.footer hr {
+  background-color: #5794b7;
+  border: none;
+  height: 2px;
+  width: 600px;
+  margin: auto;
+}
+
+.footer h6 {
+  color: #5794b7;
+  /* width: 100%;
+  margin: auto; */
+  text-align: center;
+  font-size: 12px;
+}
